@@ -1,3 +1,9 @@
+const {
+  MOVE_DOWN_KEY,
+  MOVE_LEFT_KEY,
+  MOVE_RIGHT_KEY,
+  MOVE_UP_KEY
+} = require("./constants");
 // Stores the active TCP connection object.
 let connection;
 const handleUserInput = function(stdin, conn) {
@@ -7,16 +13,16 @@ const handleUserInput = function(stdin, conn) {
       process.exit();
     }
     if (data === "w") {
-      conn.write("Move: up");
+      conn.write(MOVE_UP_KEY);
     }
     if (data === "a") {
-      conn.write("Move: left");
+      conn.write(MOVE_LEFT_KEY);
     }
     if (data === "s") {
-      conn.write("Move: down");
+      conn.write(MOVE_DOWN_KEY);
     }
     if (data === "d") {
-      conn.write("Move: right");
+      conn.write(MOVE_RIGHT_KEY);
     }
     if (data === "e") {
       conn.write("Say: EEAATT");
