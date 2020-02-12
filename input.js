@@ -18,6 +18,9 @@ const handleUserInput = function(stdin, conn) {
     if (data === "d") {
       conn.write("Move: right");
     }
+    if (data === "e") {
+      conn.write("Say: EEAATT");
+    }
   });
 };
 
